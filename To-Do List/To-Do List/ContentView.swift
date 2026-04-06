@@ -1,24 +1,47 @@
-//
-//  ContentView.swift
-//  To-Do List
-//
-//  Created by Jagadish Mangini on 06/04/26.
-//
-
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State var tasks: [String] = []
+    @State var newTask = ""
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationStack {
+            VStack {
+                
+                // Input Field
+                HStack {
+                    TextField("Enter new task", text: $newTask)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                    
+                    Button("Add") {
+                        addTask()
+                    }
+                }
+                .padding()
+                
+                // Task List
+                List {
+                    ForEach(tasks, id: \.self) { task in
+                        Text(task)
+                    }
+                    .onDelete(perform: deleteTask)
+                }
+            }
+            .navigationTitle("My Tasks")
         }
-        .padding()
     }
-}
-
-#Preview {
-    ContentView()
+    
+    // Add Task
+    func addTask() {
+        if !newTask.isEmpty {
+            tasks.append(newTask)
+            newTask = ""
+        }
+    }
+    
+    // Delete Task
+    func deleteTask(at offsets: IndexSet) {
+        tasks.remove(atOffsets: offsets)
+    }
 }
