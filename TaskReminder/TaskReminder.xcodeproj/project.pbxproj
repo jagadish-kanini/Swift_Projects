@@ -6,8 +6,19 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXContainerItemProxy section */
+		2EFF71D02F88F2B800BC9EEA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2E1947C62F8656B3000C2E25 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2E1947CD2F8656B3000C2E25;
+			remoteInfo = TaskReminder;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		2E1947CE2F8656B3000C2E25 /* TaskReminder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaskReminder.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2EFF71CC2F88F2B800BC9EEA /* TaskReminderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TaskReminderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -29,10 +40,22 @@
 			path = TaskReminder;
 			sourceTree = "<group>";
 		};
+		2EFF71CD2F88F2B800BC9EEA /* TaskReminderTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = TaskReminderTests;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		2E1947CB2F8656B3000C2E25 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2EFF71C92F88F2B800BC9EEA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -46,6 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				2E1947D02F8656B3000C2E25 /* TaskReminder */,
+				2EFF71CD2F88F2B800BC9EEA /* TaskReminderTests */,
 				2E1947CF2F8656B3000C2E25 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -54,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				2E1947CE2F8656B3000C2E25 /* TaskReminder.app */,
+				2EFF71CC2F88F2B800BC9EEA /* TaskReminderTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -68,6 +93,7 @@
 				2E1947CA2F8656B3000C2E25 /* Sources */,
 				2E1947CB2F8656B3000C2E25 /* Frameworks */,
 				2E1947CC2F8656B3000C2E25 /* Resources */,
+				2EFF71D52F88FD9B00BC9EEA /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -83,6 +109,29 @@
 			productReference = 2E1947CE2F8656B3000C2E25 /* TaskReminder.app */;
 			productType = "com.apple.product-type.application";
 		};
+		2EFF71CB2F88F2B800BC9EEA /* TaskReminderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2EFF71D42F88F2B800BC9EEA /* Build configuration list for PBXNativeTarget "TaskReminderTests" */;
+			buildPhases = (
+				2EFF71C82F88F2B800BC9EEA /* Sources */,
+				2EFF71C92F88F2B800BC9EEA /* Frameworks */,
+				2EFF71CA2F88F2B800BC9EEA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2EFF71D12F88F2B800BC9EEA /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				2EFF71CD2F88F2B800BC9EEA /* TaskReminderTests */,
+			);
+			name = TaskReminderTests;
+			packageProductDependencies = (
+			);
+			productName = TaskReminderTests;
+			productReference = 2EFF71CC2F88F2B800BC9EEA /* TaskReminderTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -95,6 +144,10 @@
 				TargetAttributes = {
 					2E1947CD2F8656B3000C2E25 = {
 						CreatedOnToolsVersion = 26.4;
+					};
+					2EFF71CB2F88F2B800BC9EEA = {
+						CreatedOnToolsVersion = 26.4;
+						TestTargetID = 2E1947CD2F8656B3000C2E25;
 					};
 				};
 			};
@@ -113,6 +166,7 @@
 			projectRoot = "";
 			targets = (
 				2E1947CD2F8656B3000C2E25 /* TaskReminder */,
+				2EFF71CB2F88F2B800BC9EEA /* TaskReminderTests */,
 			);
 		};
 /* End PBXProject section */
@@ -125,7 +179,35 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2EFF71CA2F88F2B800BC9EEA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2EFF71D52F88FD9B00BC9EEA /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2E1947CA2F8656B3000C2E25 /* Sources */ = {
@@ -135,7 +217,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2EFF71C82F88F2B800BC9EEA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2EFF71D12F88F2B800BC9EEA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2E1947CD2F8656B3000C2E25 /* TaskReminder */;
+			targetProxy = 2EFF71D02F88F2B800BC9EEA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		2E1947E22F8656B6000C2E25 /* Debug */ = {
@@ -145,6 +242,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TaskReminder/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -176,6 +274,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TaskReminder/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -319,6 +418,46 @@
 			};
 			name = Release;
 		};
+		2EFF71D22F88F2B800BC9EEA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.TaskReminderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TaskReminder.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TaskReminder";
+			};
+			name = Debug;
+		};
+		2EFF71D32F88F2B800BC9EEA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.TaskReminderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TaskReminder.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TaskReminder";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -336,6 +475,15 @@
 			buildConfigurations = (
 				2E1947E22F8656B6000C2E25 /* Debug */,
 				2E1947E32F8656B6000C2E25 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2EFF71D42F88F2B800BC9EEA /* Build configuration list for PBXNativeTarget "TaskReminderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2EFF71D22F88F2B800BC9EEA /* Debug */,
+				2EFF71D32F88F2B800BC9EEA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
