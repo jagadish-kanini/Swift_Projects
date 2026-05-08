@@ -1,9 +1,3 @@
-//
-//  Task.swift
-//  TaskReminder
-//
-//  Created by Jagadish Mangini on 08/04/26.
-//
 
 import Foundation
 
