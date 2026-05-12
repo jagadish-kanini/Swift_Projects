@@ -8,48 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--Tasks-->
         <scene sceneID="aSt-Th-koy">
             <objects>
                 <tableViewController id="vqE-36-v2u" customClass="TaskListViewController" customModule="TaskReminder" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="wlZ-99-bek">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TaskCell" textLabel="0gk-U2-rbk" detailTextLabel="0OC-o2-OUG" style="IBUITableViewCellStyleSubtitle" id="MU5-NW-KDj">
-                                <rect key="frame" x="0.0" y="50" width="393" height="51"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MU5-NW-KDj" id="nWG-IQ-syU">
-                                    <rect key="frame" x="0.0" y="0.0" width="393" height="51"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="0gk-U2-rbk">
-                                            <rect key="frame" x="20" y="8" width="25" height="14.333333333333334"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="0OC-o2-OUG">
-                                            <rect key="frame" x="19.999999999999996" y="24.333333333333336" width="52.666666666666664" height="18"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="cLa-oI-EFf" kind="show" identifier="showEditTask" id="LgH-R8-5iV"/>
-                                </connections>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="vqE-36-v2u" id="Bti-Q0-VTk"/>
-                            <outlet property="delegate" destination="vqE-36-v2u" id="UBb-Jh-ZaQ"/>
-                        </connections>
-                    </tableView>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Tasks" id="YgY-QU-xNw">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="nLh-f0-40e">
@@ -80,7 +42,7 @@
             </objects>
             <point key="canvasLocation" x="-488" y="455"/>
         </scene>
-        <!--View Controller-->
+        <!--Task Form View Controller-->
         <scene sceneID="ZgU-Bf-EjX">
             <objects>
                 <viewController id="cLa-oI-EFf" customClass="TaskFormViewController" customModule="TaskReminder" customModuleProvider="target" sceneMemberID="viewController">
@@ -126,22 +88,19 @@
                         <viewLayoutGuide key="safeArea" id="fq6-73-0Ds"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="73c-oH-9hj"/>
                     <connections>
                         <outlet property="categoryTextField" destination="2yQ-Wo-mLr" id="KhB-jN-Bcb"/>
                         <outlet property="datePicker" destination="V6Z-Op-TWH" id="0nd-B1-qZe"/>
                         <outlet property="messageTextView" destination="7AJ-bN-MW4" id="WrF-3W-hjY"/>
                         <outlet property="titleTextField" destination="MaI-2j-LPs" id="evJ-j2-BCT"/>
                     </connections>
-                    <navigationItem key="navigationItem" id="73c-oH-9hj"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tbx-nj-zMp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="429.7709923664122" y="478.87323943661977"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="LgH-R8-5iV"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
